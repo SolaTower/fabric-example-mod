@@ -1,4 +1,4 @@
-package net.fabricmc.example.items;
+package net.tisola.tutorial.item;
 
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
@@ -12,9 +12,9 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
-public class CustomItem extends Item {
+public class RubyItem extends Item {
 
-    public CustomItem(Settings settings) {
+    public RubyItem(Settings settings) {
         super(settings);
     }
 

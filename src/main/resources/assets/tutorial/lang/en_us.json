@@ -1,5 +1,3 @@
 {
-  "item.tutorial.custom_item.tooltip": "Ruby",
-  "item.tutorial.my_item": "My Item",
-  "item.tutorial.my_awesome.item": "My Awesome Item"
+  "item.tutorial.ruby_item.tooltip": "Ruby"
 }

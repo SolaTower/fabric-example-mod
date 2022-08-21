@@ -1,5 +1,7 @@
 {
   "variants": {
-    "": { "model": "tutorial:block/ruby_block" }
+    "charged=false": { "model": "tutorial:block/ruby_block" },
+    "charged=true": { "model": "tutorial:block/ruby_block_charged" }
+
   }
 }
