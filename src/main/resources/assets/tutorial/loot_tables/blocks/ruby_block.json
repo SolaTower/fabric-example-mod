@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "tutorial:ruby_block"
+          "name": "tutorial:mushi_block"
         }
       ],
       "conditions": [

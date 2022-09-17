@@ -19,7 +19,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.tisola.tutorial.TutorialMod"
+      "net.tisola.tutorial.Tutorial"
+    ],
+    "client": [
+      "net.tisola.tutorial.TutorialClient"
     ]
   },
   "mixins": [

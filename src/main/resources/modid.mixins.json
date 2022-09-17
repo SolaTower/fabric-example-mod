@@ -6,7 +6,7 @@
   "mixins": [
   ],
   "client": [
-    "TutorialModMixin"
+    "TutorialMixin"
   ],
   "injectors": {
     "defaultRequire": 1

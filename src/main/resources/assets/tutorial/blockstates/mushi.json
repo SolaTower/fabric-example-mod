@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "": { "model": "tutorial:block/mushi" },
+    "charged=true": { "model": "tutorial:block/mushi_charged" }
+  }
+}
