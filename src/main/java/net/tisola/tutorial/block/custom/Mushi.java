@@ -21,6 +21,7 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import net.tisola.tutorial.Tutorial;
 import net.tisola.tutorial.block.ModBlocks;
 import net.tisola.tutorial.block.entity.MushiEntity;
 import net.tisola.tutorial.particle.ModParticle;
@@ -56,17 +57,16 @@ public class Mushi extends MushroomPlantBlock implements BlockEntityProvider {
 
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        if (!world.isClient) {
-//            player.sendMessage(Text.of("Hello, world!"), false);
-        }
         MushiEntity entity = (MushiEntity) world.getBlockEntity(pos);
-        if (entity == null)
-            return ActionResult.FAIL;
-        player.playSound(SoundEvents.ENTITY_EXPERIENCE_ORB_PICKUP, .2f, .5f + entity.getCharge() / 8);
-        if (entity.isCharged())
-            world.setBlockState(pos, state.with(CHARGED, true));
-        else
-            entity.charge();
+        if (entity == null) return ActionResult.FAIL;
+        if (entity.isCharged()) return ActionResult.SUCCESS;
+        entity.charge();
+        if (hand == Hand.MAIN_HAND) {
+            if (!world.isClient)
+                if (entity.isCharged()) world.setBlockState(pos, state.with(CHARGED, true), Block.NOTIFY_ALL);
+            if (world.isClient)
+                player.playSound(SoundEvents.ENTITY_EXPERIENCE_ORB_PICKUP, .2f, .5f + entity.getCharge() / 8);
+        }
         return ActionResult.SUCCESS;
     }
 

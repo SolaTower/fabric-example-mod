@@ -1,6 +1,44 @@
 {
   "parent": "block/cross",
+  "credit": "Made with Blockbench",
   "textures": {
-    "all": "tutorial:block/mushi"
+    "0": "tutorial:block/mushi_charged",
+    "particle": "tutorial:block/mushi_charged"
+  },
+  "elements": [
+    {
+      "from": [3, 0, 8],
+      "to": [13, 11, 8],
+      "rotation": {"angle": 45, "axis": "y", "origin": [8, 5.5, 8]},
+      "faces": {
+        "north": {"uv": [3, 5, 13, 16], "texture": "#0"},
+        "east": {"uv": [0, 0, 1, 11], "texture": "#0"},
+        "south": {"uv": [3, 5, 13, 16], "texture": "#0"},
+        "west": {"uv": [0, 0, 1, 11], "texture": "#0"},
+        "up": {"uv": [0, 0, 10, 1], "texture": "#0"},
+        "down": {"uv": [2, 0, 12, 1], "texture": "#0"}
+      }
+    },
+    {
+      "from": [7, 0, 0],
+      "to": [17, 11, 0],
+      "rotation": {"angle": -45, "axis": "y", "origin": [0, 0, -1]},
+      "faces": {
+        "north": {"uv": [3, 5, 13, 16], "texture": "#0"},
+        "east": {"uv": [0, 0, 1, 11], "texture": "#0"},
+        "south": {"uv": [3, 5, 13, 16], "texture": "#0"},
+        "west": {"uv": [0, 0, 1, 11], "texture": "#0"},
+        "up": {"uv": [0, 0, 10, 1], "texture": "#0"},
+        "down": {"uv": [2, 0, 12, 1], "texture": "#0"}
+      }
+    }
+  ],
+  "display": {
+    "thirdperson_righthand": {
+      "translation": [0, 6.75, 0]
+    },
+    "thirstperson_righthand": {
+      "translation": [10, 6.75, 10]
+    }
   }
 }

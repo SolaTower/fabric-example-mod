@@ -25,7 +25,7 @@ import net.tisola.tutorial.item.ModItemGroups;
 public class ModBlocks {
     public static final Block MUSHI = registerBlock("mushi",
             new Mushi(FabricBlockSettings.of(Material.PLANT, MapColor.DARK_AQUA)
-                    .noCollision()
+                    .noCollision().luminance((state) -> state.get(Mushi.CHARGED) ? 15 : 0)
                     .ticksRandomly()
                     .breakInstantly()
                     .sounds(BlockSoundGroup.GRASS)),
@@ -67,13 +67,13 @@ public class ModBlocks {
         return Registry.register(Registry.BLOCK, new Identifier(Tutorial.MOD_ID, name), block);
     }
 
-    public static void registerModBlocks() {
-        Tutorial.LOGGER.info("Registering ModBlocks for " + Tutorial.MOD_ID);
-    }
-
     private static Block registerBlock(String name, Block block, ItemGroup group, String tooltipKey) {
         registerBlockItem(name, block, group, tooltipKey);
         return Registry.register(Registry.BLOCK, new Identifier(Tutorial.MOD_ID, name), block);
+    }
+
+    public static void registerModBlocks() {
+        Tutorial.LOGGER.info("Registering ModBlocks for " + Tutorial.MOD_ID);
     }
 
     public static void InitClientSide() {
