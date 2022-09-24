@@ -63,7 +63,7 @@ public class Mushi extends MushroomPlantBlock implements BlockEntityProvider {
         entity.charge();
         if (hand == Hand.MAIN_HAND) {
             if (!world.isClient)
-                if (entity.isCharged()) world.setBlockState(pos, state.with(CHARGED, true), Block.NOTIFY_ALL);
+                if (entity.isCharged()) world.setBlockState(pos, state.with(CHARGED, true), Block.NOTIFY_NEIGHBORS);
             if (world.isClient)
                 player.playSound(SoundEvents.ENTITY_EXPERIENCE_ORB_PICKUP, .2f, .5f + entity.getCharge() / 8);
         }

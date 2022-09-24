@@ -1,3 +1,6 @@
 {
-  "parent": "tutorial:block/mushi"
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "tutorial:block/mushi"
+  }
 }
